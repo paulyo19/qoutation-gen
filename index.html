@@ -14,8 +14,37 @@
 
 <body>
 
-
-        <div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 mx-auto">
+                <h1>Quoation Generator</h1>
+                <header class="bg-primary d-flex justify-content-between p-2">
+                    <div>
+                        <select id="type">
+                            <option value="animals">Animals</option>
+                            <option value="humans">Humans</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="qty">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button id="generate">Generate</button>
+                    </div>
+                </header>
+                <div class="bg-info p-4">
+                    <div id="quotes"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container d-none">
             <div id="content">
             <h3>Quotation Generator</h3>
             </div>
@@ -26,28 +55,18 @@
                 <br />
                 <br />
                 <br />
-                <p>Now choose how many quotes you want to generator</p>
+                <p>Now choose how many quotes you want to Generate</p>
                 <button id="one">1</button>
                 <button id="two">2</button>
                 <button id="three">3</button>
                 <button id="four">4</button>
                 <button id="five">5</button>
-                <br />
-    
-                <p id="quote1"></p>
-                <p id="quote2"></p>
-                <p id="quote3"></p>
-                <p id="quote4"></p>
-                <p id="quote5"></p>
     
                 <br />
                 <br />
-                
-            
-                <p id="options">Or you can go one step further!</p>
     
                 <p>How about picking a !!When!! to make things more intersting</p>
-                <button id="option1">Generate past or future</button>
+                <button id="option1">Animals</button>
     
                 <p>And Where?</p>
                 <button id="option2">Generate location or event</button>
