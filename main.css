@@ -1,0 +1,18 @@
+body {
+  background-image: url(images/blurred.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body,
+h1,
+h3,
+p {
+  font-family: helvetica, serif;
+}
+
+.container {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 25px;
+}
