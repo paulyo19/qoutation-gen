@@ -35,11 +35,11 @@ function generateQuote(type) {
 
 
 generateBtn.addEventListener('click', function() {
-     
-
     for(var i = 0; i < parseInt(qty.value); i++) {
-        console.log('quote:', generateQuote(type.value))        
+        document.querySelector('#quote').textContent = generateQuote(type.value);
+//    console.log('quote:', generateQuote(type.value))   
+              
     }
+    console.log('ended loop...');
+});
 
-    console.log('ended loop...')
-})
