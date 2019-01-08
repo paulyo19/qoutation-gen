@@ -2,30 +2,6 @@ var type = document.querySelector('#type');
 var qty = document.querySelector('#qty');
 var generateBtn = document.querySelector('#generate');
 
-
-function generateQuote(type) {
-
-    var part1 = quotes[type].start[Math.floor(Math.random() * quotes[type].start.length)];
-    var part2 = quotes[type].middle[Math.floor(Math.random() * quotes[type].middle.length)];
-    var part3 = quotes[type].end[Math.floor(Math.random() * quotes[type].end.length)];
-    var part4 = quotes[type].where[Math.floor(Math.random() * quotes[type].where.length)];
-    var part5 = quotes[type].when[Math.floor(Math.random() * quotes[type].when.length)];
-
-    return part1 + " " + part2 + " " + part3 + " " + part4 + " " + part5;
-}
-
-
-generateBtn.addEventListener('click', function () {
-    for (var i = 0; i < parseInt(qty.value); i++) {
-        document.querySelector('#quote').textContent = generateQuote(type.value);
-        //    console.log('quote:', generateQuote(type.value))   
-
-    }
-    console.log('ended loop...');
-});
-
-
-
 var quotes = {
     humans: {
         start: ['The young child', 'The old man', 'An entire family', 'The tall bloke', 'A happy kid', 'The dumb blond', 'A smart lady', 'The idiot man', 'The tiny dwarf', 'A famous celebrity', 'The crazy scientist', 'The moody teenager', 'The handy man', 'The clumsy clown'],
@@ -44,4 +20,30 @@ var quotes = {
 }
 
 
-//    console.log('quote:', generateQuote(type.value)) 
+function generateQuote(type) {
+
+    var part1 = quotes[type].start[Math.floor(Math.random() * quotes[type].start.length)];
+    var part2 = quotes[type].middle[Math.floor(Math.random() * quotes[type].middle.length)];
+    var part3 = quotes[type].end[Math.floor(Math.random() * quotes[type].end.length)];
+    var part4 = quotes[type].where[Math.floor(Math.random() * quotes[type].where.length)];
+    var part5 = quotes[type].when[Math.floor(Math.random() * quotes[type].when.length)];
+
+    return part1 + " " + part2 + " " + part3 + " " + part4 + " " + part5 + '<hr style="border-top-color: rgba(0,0,0,.5)" />';
+}
+
+
+generateBtn.addEventListener('click', function () {
+    console.log('qty', Math.floor(qty.value));
+    var output = [];
+    for (var i = 0; i < Number(qty.value); i++) {
+        output.push(generateQuote(type.value));
+       
+  //    console.log('quote:', generateQuote(type.value)) 
+    }
+    document.getElementById('quote').innerHTML = output.join("");
+    console.log('ended loop...');
+});
+
+
+
+
